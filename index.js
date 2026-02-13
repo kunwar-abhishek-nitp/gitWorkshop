@@ -17,3 +17,7 @@ function sale(){
 function feature(){
     return 'screen';
 }
+
+function getAge(age){
+    return age;
+}
