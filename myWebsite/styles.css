@@ -1,0 +1,93 @@
+/*
+  styles.css
+  Modern, responsive styles for the portfolio website.
+  Uses CSS variables for easy theming and responsive grid layouts.
+*/
+
+:root{
+  --bg:#0f1724; /* deep navy */
+  --card:#0f1b2b; /* dark card */
+  --muted:#94a3b8; /* muted text */
+  --accent:#7c3aed; /* violet */
+  --accent-2:#06b6d4; /* teal */
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --max-width:1100px;
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg, var(--bg) 0%, #071128 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+/* Header */
+.site-header{position:sticky;top:0;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);backdrop-filter:blur(6px);z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--muted);text-decoration:none;padding:.5rem .75rem;border-radius:8px;transition:all .18s}
+.nav a:hover{background:var(--glass);color:var(--accent-2)}
+.nav-toggle{display:none;background:none;border:0;color:var(--muted);font-size:1.25rem}
+
+/* Hero */
+.hero{padding:4rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:center}
+.hero-content h1{font-size:2.1rem;margin:0}
+.accent{color:var(--accent)}
+.lead{color:var(--muted);margin-top:.5rem;max-width:40ch}
+.hero-actions{margin-top:1.25rem;display:flex;gap:.75rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1.25rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.meta-list{list-style:none;padding:0;margin:0;color:var(--muted)}
+.card-links a{color:var(--accent-2);text-decoration:none}
+
+/* About */
+.about{padding:3rem 0}
+.about p{color:var(--muted);line-height:1.6}
+
+/* Skills grid */
+.skills{padding:3rem 0}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.skill-card{background:var(--card);padding:1rem;border-radius:12px;text-align:center;font-weight:600;transition:transform .18s, box-shadow .18s}
+.skill-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(124,58,237,0.12)}
+
+/* Contact */
+.contact{padding:3rem 0}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.contact-card{background:var(--card);padding:1rem;border-radius:12px}
+.contact-card h3{margin-top:0}
+.form-card form{display:flex;flex-direction:column;gap:.5rem}
+.form-card input,.form-card textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:.6rem;border-radius:8px;color:inherit}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none;position:absolute;left:0;right:0;top:72px;background:var(--bg);flex-direction:column;padding:1rem}
+  .nav-toggle{display:block}
+}
+
+@media (max-width:480px){
+  .skills-grid{grid-template-columns:1fr}
+  .brand{font-size:0.95rem}
+}
+
+/* Small utilities */
+.muted{color:var(--muted)}

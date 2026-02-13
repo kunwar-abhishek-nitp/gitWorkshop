@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abhishek Kumar — Portfolio</title>
+    <meta name="description" content="Portfolio of Abhishek Kumar — AI & DS student" />
+    <!-- Link to generated stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Site header / navigation -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">Abhishek Kumar</a>
+        <nav class="nav" id="nav">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </header>
+
+    <!-- Hero section: intro with call-to-action -->
+    <main>
+      <section id="hero" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Hi, I'm <span class="accent">Abhishek Kumar</span></h1>
+            <p class="lead">AI & DS student at NIT Patna — building clean, efficient software using C/C++ and Python.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#contact">Get in touch</a>
+              <a class="btn ghost" href="#skills">View skills</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <!-- Simple card with key details -->
+            <div class="card">
+              <h3>Student Details</h3>
+              <ul class="meta-list">
+                <li><strong>College:</strong> NIT Patna</li>
+                <li><strong>Roll No:</strong> 2513029</li>
+                <li><strong>Branch:</strong> AI & DS</li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/kunwar-abhishek-nitp" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me section -->
+      <section id="about" class="about container">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate student focused on artificial intelligence and data science. I enjoy
+          solving algorithmic problems and writing performant code in C/C++ and Python. I'm eager
+          to collaborate on research and projects that apply ML to real-world problems.
+        </p>
+      </section>
+
+      <!-- Skills grid -->
+      <section id="skills" class="skills container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <!-- Each skill tile is simple and accessible -->
+          <div class="skill-card">C / C++</div>
+          <div class="skill-card">Python</div>
+          <div class="skill-card">Algorithms</div>
+          <div class="skill-card">Data Structures</div>
+          <div class="skill-card">Machine Learning</div>
+          <div class="skill-card">Git / GitHub</div>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" class="contact container">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:ak3958449@gmail.com">ak3958449@gmail.com</a></p>
+          </div>
+          <div class="contact-card">
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/kunwar-abhishek-nitp" target="_blank" rel="noopener">github.com/kunwar-abhishek-nitp</a></p>
+          </div>
+          <div class="contact-card form-card">
+            <h3>Message Me</h3>
+            <!-- Simple form that opens the user's email client using mailto (no backend required) -->
+            <form id="contact-form">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Write a short message" required></textarea>
+
+              <button type="submit" class="btn primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Abhishek Kumar — NIT Patna</div>
+        <div class="social">
+          <a href="https://github.com/kunwar-abhishek-nitp" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link to generated JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
